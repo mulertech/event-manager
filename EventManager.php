@@ -1,8 +1,6 @@
 <?php
 
-
-namespace mtphp\EventManager;
-
+namespace MulerTech\EventManager;
 
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;
@@ -10,7 +8,7 @@ use RuntimeException;
 
 /**
  * Class EventManager
- * @package mtphp\EventManager
+ * @package MulerTech\EventManager
  * @author Sébastien Muler
  */
 class EventManager implements EventManagerInterface, EventDispatcherInterface, ListenerProviderInterface

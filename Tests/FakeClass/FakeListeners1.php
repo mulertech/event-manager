@@ -1,10 +1,8 @@
 <?php
 
+namespace MulerTech\EventManager\Tests\FakeClass;
 
-namespace mtphp\EventManager\Tests\FakeClass;
-
-
-use mtphp\EventManager\ListenerInterface;
+use MulerTech\EventManager\ListenerInterface;
 
 class FakeListeners1 implements ListenerInterface
 {

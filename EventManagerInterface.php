@@ -1,11 +1,10 @@
 <?php
 
-
-namespace mtphp\EventManager;
+namespace MulerTech\EventManager;
 
 /**
  * Interface EventManagerInterface
- * @package mtphp\EventManager
+ * @package MulerTech\EventManager
  * @author Sébastien Muler
  */
 interface EventManagerInterface

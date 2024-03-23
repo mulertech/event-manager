@@ -1,0 +1,21 @@
+{
+  "name": "mulertech/event-manager",
+  "description": "This package manage events in your application",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sébastien Muler",
+      "email": "sebastien.muler@mulertech.net"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "psr/event-dispatcher": "^1"
+  },
+  "autoload": {
+    "psr-4": {
+      "MulerTech\\EventManager\\": "./"
+    }
+  }
+}

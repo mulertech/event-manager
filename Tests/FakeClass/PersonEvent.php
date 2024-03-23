@@ -1,10 +1,8 @@
 <?php
 
+namespace MulerTech\EventManager\Tests\FakeClass;
 
-namespace mtphp\EventManager\Tests\FakeClass;
-
-
-use mtphp\EventManager\Event;
+use MulerTech\EventManager\Event;
 
 class PersonEvent extends Event
 {

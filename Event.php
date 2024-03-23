@@ -1,14 +1,12 @@
 <?php
 
-
-namespace mtphp\EventManager;
-
+namespace MulerTech\EventManager;
 
 use Psr\EventDispatcher\StoppableEventInterface;
 
 /**
  * Class EventManager
- * @package mtphp\EventManager
+ * @package MulerTech\EventManager
  * @author Sébastien Muler
  */
 class Event implements EventInterface, StoppableEventInterface

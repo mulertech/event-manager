@@ -1,8 +1,6 @@
 <?php
 
-
-namespace mtphp\EventManager\Tests\FakeClass;
-
+namespace MulerTech\EventManager\Tests\FakeClass;
 
 class EntityOne
 {

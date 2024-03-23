@@ -1,16 +1,16 @@
 <?php
 
-namespace mtphp\EventManager\Tests;
+namespace MulerTech\EventManager\Tests;
 
-use mtphp\EventManager\EventManager;
-use mtphp\EventManager\Tests\FakeClass\EntityOne;
-use mtphp\EventManager\Tests\FakeClass\FakeListeners4;
-use mtphp\EventManager\Tests\FakeClass\FakeListeners5;
+use MulerTech\EventManager\EventManager;
+use MulerTech\EventManager\Tests\FakeClass\EntityOne;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners4;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners5;
 use PHPUnit\Framework\TestCase;
-use mtphp\EventManager\Tests\FakeClass\FakeListeners1;
-use mtphp\EventManager\Tests\FakeClass\FakeListeners2;
-use mtphp\EventManager\Tests\FakeClass\FakeListeners3;
-use mtphp\EventManager\Tests\FakeClass\PersonEvent;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners1;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners2;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners3;
+use MulerTech\EventManager\Tests\FakeClass\PersonEvent;
 
 class EventTest extends TestCase
 {
