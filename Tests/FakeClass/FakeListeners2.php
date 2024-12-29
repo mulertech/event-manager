@@ -6,7 +6,6 @@ use MulerTech\EventManager\ListenerInterface;
 
 class FakeListeners2 implements ListenerInterface
 {
-
     /**
      * @inheritDoc
      */
@@ -19,7 +18,6 @@ class FakeListeners2 implements ListenerInterface
         ];
     }
 
-
     public function echoHello($event) {
         echo 'Hello ' . $event->getTarget()->getName() . ' !';
     }
@@ -31,5 +29,4 @@ class FakeListeners2 implements ListenerInterface
     public function echoWelcome() {
         echo 'Welcome !';
     }
-
 }

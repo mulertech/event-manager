@@ -10,8 +10,14 @@
     }
   ],
   "require": {
-    "php": ">=7.4",
+    "php": "^8.2",
     "psr/event-dispatcher": "^1"
+  }
+  ,
+  "require-dev": {
+    "mulertech/docker-tests": "^1",
+    "phpunit/phpunit": "^10|^11",
+    "roave/security-advisories": "dev-latest"
   },
   "autoload": {
     "psr-4": {

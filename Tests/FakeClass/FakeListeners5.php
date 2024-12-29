@@ -6,7 +6,6 @@ use MulerTech\EventManager\ListenerInterface;
 
 class FakeListeners5 implements ListenerInterface
 {
-
     /**
      * @inheritDoc
      */
@@ -15,10 +14,7 @@ class FakeListeners5 implements ListenerInterface
         return ['person.event' => 'echoTheEnd'];
     }
 
-
     public function echoTheEnd() {
         echo ' It\'s the end !';
     }
-
-
 }

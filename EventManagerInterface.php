@@ -9,7 +9,6 @@ namespace MulerTech\EventManager;
  */
 interface EventManagerInterface
 {
-
     /**
      * @param string $event
      * @param callable $callback
@@ -17,5 +16,4 @@ interface EventManagerInterface
      * @return bool
      */
     public function addListener(string $event, callable $callback, int $priority = 0): bool;
-
 }

@@ -9,7 +9,6 @@ namespace MulerTech\EventManager;
  */
 interface EventInterface
 {
-
     /**
      * @return string
      */
@@ -18,7 +17,7 @@ interface EventInterface
     /**
      * @return mixed
      */
-    public function getTarget();
+    public function getTarget(): mixed;
 
     /**
      * @return array
@@ -29,7 +28,7 @@ interface EventInterface
      * @param string $name
      * @return mixed
      */
-    public function getParam(string $name);
+    public function getParam(string $name): mixed;
 
     /**
      * @param string $name
@@ -38,10 +37,10 @@ interface EventInterface
     public function setName(string $name): void;
 
     /**
-     * @param null|string|object $target
+     * @param object|string|null $target
      * @return void
      */
-    public function setTarget($target): void;
+    public function setTarget(object|string|null $target): void;
 
     /**
      * @param array $params
@@ -54,5 +53,4 @@ interface EventInterface
      * @return void
      */
     public function stopPropagation(bool $flag): void;
-
 }

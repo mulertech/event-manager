@@ -6,6 +6,7 @@ use MulerTech\EventManager\EventManager;
 use MulerTech\EventManager\Tests\FakeClass\EntityOne;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners4;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners5;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners6;
 use PHPUnit\Framework\TestCase;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners1;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners2;
@@ -14,7 +15,6 @@ use MulerTech\EventManager\Tests\FakeClass\PersonEvent;
 
 class EventTest extends TestCase
 {
-
     private function getPersonEventClear($entity): PersonEvent
     {
         $personEvent = new PersonEvent($entity);
@@ -150,6 +150,18 @@ class EventTest extends TestCase
         $this->expectOutputString('Hello !Welcome !The end... Other message and stop propagation...');
     }
 
-
-
+    public function testEventWithBadListener(): void
+    {
+        $this->expectExceptionMessage(
+            'Class EventManager. The listener (MulerTech\EventManager\Tests\FakeClass\FakeListeners6) hasn\'t function called "badMethod"...'
+            );
+        $obj = new EntityOne();
+        $obj->age = 30;
+        $obj->name = 'John';
+        //Events actions
+        $manager = new EventManager();
+        $manager->addListeners(new FakeListeners6());
+        //In the class that call this event
+        $manager->dispatch($this->getPersonEventClear($obj));
+    }
 }

@@ -4,17 +4,17 @@ namespace MulerTech\EventManager\Tests\FakeClass;
 
 use MulerTech\EventManager\ListenerInterface;
 
-class FakeListeners3 implements ListenerInterface
+class FakeListeners6 implements ListenerInterface
 {
     /**
      * @inheritDoc
      */
     public static function getListeners(): array
     {
-        return ['person.event' => 'echoHello'];
+        return ['person.event' => 'badMethod'];
     }
 
-    public function echoHello() {
-        echo 'Hello World !';
+    public function echoTheEnd() {
+        echo ' It\'s the end !';
     }
 }

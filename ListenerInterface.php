@@ -9,7 +9,6 @@ namespace MulerTech\EventManager;
  */
 interface ListenerInterface
 {
-
     /**
      * Get the list of event listeners, examples :
      * ['person.event' => 'echoHello']

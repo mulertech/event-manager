@@ -11,26 +11,25 @@ use Psr\EventDispatcher\StoppableEventInterface;
  */
 class Event implements EventInterface, StoppableEventInterface
 {
-
     /**
      * @var string
      */
-    private $name = '';
+    private string $name = '';
 
     /**
      * @var mixed
      */
-    private $target;
+    private mixed $target;
 
     /**
      * @var array
      */
-    private $params = [];
+    private array $params = [];
 
     /**
      * @var bool
      */
-    private static $propagationStopped = false;
+    private bool $propagationStopped = false;
 
     /**
      * @return string
@@ -43,7 +42,7 @@ class Event implements EventInterface, StoppableEventInterface
     /**
      * @return mixed
      */
-    public function getTarget()
+    public function getTarget(): mixed
     {
         return $this->target;
     }
@@ -58,9 +57,9 @@ class Event implements EventInterface, StoppableEventInterface
 
     /**
      * @param string $name
-     * @return mixed|null
+     * @return mixed
      */
-    public function getParam(string $name)
+    public function getParam(string $name): mixed
     {
         return $this->params[$name] ?? null;
     }
@@ -75,10 +74,10 @@ class Event implements EventInterface, StoppableEventInterface
     }
 
     /**
-     * @param null|string|object $target
+     * @param object|string|null $target
      * @return void
      */
-    public function setTarget($target): void
+    public function setTarget(object|string|null $target): void
     {
         $this->target = $target;
     }
@@ -98,7 +97,7 @@ class Event implements EventInterface, StoppableEventInterface
      */
     public function stopPropagation(bool $flag = true): void
     {
-        self::$propagationStopped = $flag;
+        $this->propagationStopped = $flag;
     }
 
     /**
@@ -106,6 +105,6 @@ class Event implements EventInterface, StoppableEventInterface
      */
     public function isPropagationStopped(): bool
     {
-        return self::$propagationStopped;
+        return $this->propagationStopped;
     }
 }

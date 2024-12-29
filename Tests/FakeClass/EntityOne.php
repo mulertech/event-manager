@@ -4,7 +4,6 @@ namespace MulerTech\EventManager\Tests\FakeClass;
 
 class EntityOne
 {
-
     public $name;
 
     public $age;
@@ -73,5 +72,4 @@ class EntityOne
     {
         $this->adult = $adult;
     }
-
 }

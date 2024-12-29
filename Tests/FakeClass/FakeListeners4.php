@@ -6,7 +6,6 @@ use MulerTech\EventManager\ListenerInterface;
 
 class FakeListeners4 implements ListenerInterface
 {
-
     /**
      * @inheritDoc
      */
@@ -15,12 +14,9 @@ class FakeListeners4 implements ListenerInterface
         return ['person.event' => 'echoMiddleAndStop'];
     }
 
-
     public function echoMiddleAndStop(PersonEvent $event): void
     {
         echo ' Other message and stop propagation...';
         $event->stopPropagation();
     }
-
-
 }
