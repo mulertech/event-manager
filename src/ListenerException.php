@@ -10,4 +10,5 @@ use Exception;
  * @author Sébastien Muler
  */
 class ListenerException extends Exception
-{}
+{
+}

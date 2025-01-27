@@ -20,7 +20,7 @@ interface EventInterface
     public function getTarget(): mixed;
 
     /**
-     * @return array
+     * @return array<string, mixed>
      */
     public function getParams(): array;
 
@@ -43,7 +43,7 @@ interface EventInterface
     public function setTarget(object|string|null $target): void;
 
     /**
-     * @param array $params
+     * @param array<string, mixed> $params
      * @return void
      */
     public function setParams(array $params): void;
@@ -53,4 +53,9 @@ interface EventInterface
      * @return void
      */
     public function stopPropagation(bool $flag): void;
+
+    /**
+     * @return bool
+     */
+    public function isPropagationStopped(): bool;
 }
