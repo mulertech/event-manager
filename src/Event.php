@@ -22,7 +22,7 @@ class Event implements EventInterface, StoppableEventInterface
     private mixed $target;
 
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     private array $params = [];
 
@@ -48,7 +48,7 @@ class Event implements EventInterface, StoppableEventInterface
     }
 
     /**
-     * @return array
+     * @return array<string, mixed>
      */
     public function getParams(): array
     {
@@ -83,7 +83,7 @@ class Event implements EventInterface, StoppableEventInterface
     }
 
     /**
-     * @param array $params
+     * @param array<string, mixed> $params
      * @return void
      */
     public function setParams(array $params): void

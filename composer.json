@@ -15,13 +15,20 @@
   }
   ,
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.6",
     "mulertech/docker-tests": "^1",
-    "phpunit/phpunit": "^10|^11",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11",
     "roave/security-advisories": "dev-latest"
   },
   "autoload": {
     "psr-4": {
-      "MulerTech\\EventManager\\": "./"
+      "MulerTech\\EventManager\\": "./src"
     }
+  },
+  "autoload-dev": {
+      "psr-4": {
+      "MulerTech\\EventManager\\Tests\\": "./tests"
+      }
   }
 }

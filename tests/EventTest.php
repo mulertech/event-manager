@@ -4,14 +4,14 @@ namespace MulerTech\EventManager\Tests;
 
 use MulerTech\EventManager\EventManager;
 use MulerTech\EventManager\Tests\FakeClass\EntityOne;
-use MulerTech\EventManager\Tests\FakeClass\FakeListeners4;
-use MulerTech\EventManager\Tests\FakeClass\FakeListeners5;
-use MulerTech\EventManager\Tests\FakeClass\FakeListeners6;
-use PHPUnit\Framework\TestCase;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners1;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners2;
 use MulerTech\EventManager\Tests\FakeClass\FakeListeners3;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners4;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners5;
+use MulerTech\EventManager\Tests\FakeClass\FakeListeners6;
 use MulerTech\EventManager\Tests\FakeClass\PersonEvent;
+use PHPUnit\Framework\TestCase;
 
 class EventTest extends TestCase
 {
