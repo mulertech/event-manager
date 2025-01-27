@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1738018261">
-  <project timestamp="1738018261">
+<coverage generated="1738018760">
+  <project timestamp="1738018760">
     <package name="MulerTech\EventManager">
-      <file name="/var/www/html/src/Event.php">
+      <file name="/home/runner/work/event-manager/event-manager/src/Event.php">
         <class name="MulerTech\EventManager\Event" namespace="MulerTech\EventManager">
           <metrics complexity="9" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="6" elements="18" coveredelements="12"/>
         </class>
@@ -26,7 +26,7 @@
         <line num="108" type="stmt" count="8"/>
         <metrics loc="111" ncloc="62" classes="1" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="6" elements="18" coveredelements="12"/>
       </file>
-      <file name="/var/www/html/src/EventManager.php">
+      <file name="/home/runner/work/event-manager/event-manager/src/EventManager.php">
         <class name="MulerTech\EventManager\EventManager" namespace="MulerTech\EventManager">
           <metrics complexity="17" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="43" elements="50" coveredelements="48"/>
         </class>
@@ -82,20 +82,20 @@
         <line num="140" type="stmt" count="1"/>
         <metrics loc="143" ncloc="106" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="43" elements="50" coveredelements="48"/>
       </file>
-      <file name="/var/www/html/src/ListenerException.php">
+      <file name="/home/runner/work/event-manager/event-manager/src/ListenerException.php">
         <class name="MulerTech\EventManager\ListenerException" namespace="MulerTech\EventManager">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="15" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
-    <file name="/var/www/html/src/EventInterface.php">
+    <file name="/home/runner/work/event-manager/event-manager/src/EventInterface.php">
       <metrics loc="62" ncloc="25" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/var/www/html/src/EventManagerInterface.php">
+    <file name="/home/runner/work/event-manager/event-manager/src/EventManagerInterface.php">
       <metrics loc="20" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/var/www/html/src/ListenerInterface.php">
+    <file name="/home/runner/work/event-manager/event-manager/src/ListenerInterface.php">
       <metrics loc="21" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <metrics files="6" loc="372" ncloc="221" classes="2" methods="15" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="49" elements="68" coveredelements="60"/>
