@@ -1,6 +1,12 @@
 # EventManager
 
 ___
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mulertech/event-manager.svg?style=flat-square)](https://packagist.org/packages/mulertech/event-manager)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mulertech/event-manager/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mulertech/event-manager/actions/workflows/tests.yml)
+[![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/mulertech/event-manager/phpstan.yml?branch=main&label=phpstan&style=flat-square)](https://github.com/mulertech/event-manager/actions/workflows/phpstan.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/mulertech/event-manager.svg?style=flat-square)](https://packagist.org/packages/mulertech/event-manager)
+[![Test Coverage](https://raw.githubusercontent.com/mulertech/event-manager/main/badge-coverage.svg)](https://packagist.org/packages/mulertech/event-manager)
+___
 
 The MulerTech EventManager package is a simple event manager that allows you to register and trigger events in your PHP application.
 
