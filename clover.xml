@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1738093534">
-  <project timestamp="1738093534">
+<coverage generated="1738094706">
+  <project timestamp="1738094706">
     <package name="MulerTech\EventManager">
       <file name="/home/runner/work/event-manager/event-manager/src/Event.php">
         <class name="MulerTech\EventManager\Event" namespace="MulerTech\EventManager">
