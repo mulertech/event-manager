@@ -11,7 +11,7 @@ class FakeListeners3 implements ListenerInterface
      */
     public static function getListeners(): array
     {
-        return ['person.event' => 'echoHello'];
+        return ['person.event' => [['echoHello', 'wrong value, it must be a number']]];
     }
 
     public function echoHello() {

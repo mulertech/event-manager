@@ -6,13 +6,9 @@ use MulerTech\EventManager\Event;
 
 class PersonEvent extends Event
 {
-
-    public function __construct($entity)
+    public function __construct(object $entity)
     {
         $this->setName('person.event');
         $this->setTarget($entity);
     }
-
-
-
 }

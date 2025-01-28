@@ -164,4 +164,12 @@ class EventTest extends TestCase
         //In the class that call this event
         $manager->dispatch($this->getPersonEventClear($obj));
     }
+
+    public function testSetParamsAndGetParams(): void
+    {
+        $personEvent = $this->getPersonEventClear(new EntityOne());
+        $personEvent->setParams(['param1' => 'value1', 'param2' => 'value2']);
+        self::assertEquals(['param1' => 'value1', 'param2' => 'value2'], $personEvent->getParams());
+        self::assertEquals('value1', $personEvent->getParam('param1'));
+    }
 }

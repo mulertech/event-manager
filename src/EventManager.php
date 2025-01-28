@@ -34,6 +34,7 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
      * Extract the ListenerInterface into the listeners list.
      * @param ListenerInterface $listeners
      * @return bool
+     * @throws ListenerException
      */
     public function addListeners(ListenerInterface $listeners): bool
     {
@@ -74,14 +75,10 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
         $listeners = $this->listeners[$event->getName()];
 
         usort($listeners, static function ($listenerA, $listenerB) {
-            $priorityA = $listenerA['priority'];
-            $priorityB = $listenerB['priority'];
+            $priorityA = is_callable($listenerA['priority']) ? 0 : $listenerA['priority'];
+            $priorityB = is_callable($listenerB['priority']) ? 0 : $listenerB['priority'];
 
-            if (!is_int($priorityA) || !is_int($priorityB)) {
-                return 0;
-            }
-
-            return $priorityB - $priorityA;
+            return (int)$priorityB - (int)$priorityA;
         });
 
         return $listeners;
@@ -114,8 +111,8 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
 
         foreach ($args as $listener) {
             if (is_array($listener)) {
-                /** @phpstan-ignore nullCoalesce.offset */
-                $priority = $listener[1] ?? 0;
+                /** @phpstan-ignore offsetAccess.notFound */
+                $priority = is_int($listener[1]) ? $listener[1] : 0;
                 /** @phpstan-ignore nullCoalesce.offset */
                 $method = $listener[0] ?? 'Listener method not given';
                 $this->extractListeners($listeners, $eventName, $method, $priority);
