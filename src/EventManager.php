@@ -6,25 +6,22 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;
 
 /**
- * Class EventManager
- * @package MulerTech\EventManager
+ * Class EventManager.
+ *
  * @author Sébastien Muler
  */
 class EventManager implements EventManagerInterface, EventDispatcherInterface, ListenerProviderInterface
 {
     /**
-     * @var array<string, array<int, array<string, callable|int>>> $listeners
+     * @var array<string, array<int, array<string, callable|int>>>
      */
     private array $listeners = [];
 
-    /**
-     * @inheritDoc
-     */
     public function addListener(string $event, callable $callback, int $priority = 0): bool
     {
         $this->listeners[$event][] = [
             'callback' => $callback,
-            'priority' => $priority
+            'priority' => $priority,
         ];
 
         return true;
@@ -32,8 +29,7 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
 
     /**
      * Extract the ListenerInterface into the listeners list.
-     * @param ListenerInterface $listeners
-     * @return bool
+     *
      * @throws ListenerException
      */
     public function addListeners(ListenerInterface $listeners): bool
@@ -47,7 +43,6 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
 
     /**
      * @param EventInterface $event
-     * @return object
      */
     public function dispatch(object $event): object
     {
@@ -68,6 +63,7 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
 
     /**
      * @param EventInterface $event
+     *
      * @return iterable<int, array<string, callable|int>>
      */
     public function getListenersForEvent(object $event): iterable
@@ -78,24 +74,22 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
             $priorityA = is_callable($listenerA['priority']) ? 0 : $listenerA['priority'];
             $priorityB = is_callable($listenerB['priority']) ? 0 : $listenerB['priority'];
 
-            return (int)$priorityB - (int)$priorityA;
+            return (int) $priorityB - (int) $priorityA;
         });
 
         return $listeners;
     }
 
     /**
-     * @param ListenerInterface $listeners
-     * @param string $eventName
      * @param string|array<int, string>|array<int, array<string, int>> $args
-     * @return void
+     *
      * @throws ListenerException
      */
     private function extractListeners(
         ListenerInterface $listeners,
         string $eventName,
         string|array $args,
-        int $priority = 0
+        int $priority = 0,
     ): void {
         if (is_string($args)) {
             $callable = [$listeners, $args];
@@ -104,8 +98,9 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
                 $this->throwException($listeners, $args);
             }
 
-            /** @var Callable $callable */
+            assert(is_callable($callable));
             $this->addListener($eventName, $callable, $priority);
+
             return;
         }
 
@@ -128,12 +123,6 @@ class EventManager implements EventManagerInterface, EventDispatcherInterface, L
      */
     private function throwException(ListenerInterface $listeners, string $method): void
     {
-        throw new ListenerException(
-            sprintf(
-                'Class EventManager. The listener (%s) hasn\'t function called "%s"...',
-                $listeners::class,
-                $method
-            )
-        );
+        throw new ListenerException(sprintf('Class EventManager. The listener (%s) hasn\'t function called "%s"...', $listeners::class, $method));
     }
 }

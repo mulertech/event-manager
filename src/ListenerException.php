@@ -2,13 +2,11 @@
 
 namespace MulerTech\EventManager;
 
-use Exception;
-
 /**
- * Class ListenerException
- * @package MulerTech\EventManager
+ * Class ListenerException.
+ *
  * @author Sébastien Muler
  */
-class ListenerException extends Exception
+class ListenerException extends \Exception
 {
 }
