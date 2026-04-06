@@ -2,7 +2,12 @@
   "name": "mulertech/event-manager",
   "description": "This package manage events in your application",
   "type": "library",
-  "keywords": ["php", "event", "dispatcher", "psr-14"],
+  "keywords": [
+    "php",
+    "event",
+    "dispatcher",
+    "psr-14"
+  ],
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -12,10 +17,9 @@
     }
   ],
   "require": {
-    "php": "^8.3",
+    "php": "^8.4",
     "psr/event-dispatcher": "^1"
-  }
-  ,
+  },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.6",
     "mulertech/docker-dev": "^3.2",
@@ -29,8 +33,11 @@
     }
   },
   "autoload-dev": {
-      "psr-4": {
+    "psr-4": {
       "MulerTech\\EventManager\\Tests\\": "./tests"
-      }
+    }
+  },
+  "config": {
+    "sort-packages": true
   }
 }

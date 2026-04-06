@@ -4,6 +4,7 @@ ___
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mulertech/event-manager.svg?style=flat-square)](https://packagist.org/packages/mulertech/event-manager)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mulertech/event-manager/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mulertech/event-manager/actions/workflows/tests.yml)
 [![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/mulertech/event-manager/phpstan.yml?branch=main&label=phpstan&style=flat-square)](https://github.com/mulertech/event-manager/actions/workflows/phpstan.yml)
+[![GitHub Security Action Status](https://img.shields.io/github/actions/workflow/status/mulertech/event-manager/security.yml?branch=main&label=security&style=flat-square)](https://github.com/mulertech/event-manager/actions/workflows/security.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/mulertech/event-manager.svg?style=flat-square)](https://packagist.org/packages/mulertech/event-manager)
 [![Test Coverage](https://raw.githubusercontent.com/mulertech/event-manager/badge/badge-coverage.svg)](https://packagist.org/packages/mulertech/event-manager)
 ___
